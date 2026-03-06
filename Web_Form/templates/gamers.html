@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gamers</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Gamers Database</h2>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>DOB</th>
+<th>Phone</th>
+<th>Games</th>
+<th>Level</th>
+</tr>
+
+{% for g in gamers %}
+
+<tr>
+<td>{{ g.id }}</td>
+<td>{{ g.name }}</td>
+<td>{{ g.dob }}</td>
+<td>{{ g.phone }}</td>
+<td>{{ g.interested_games }}</td>
+<td>{{ g.level }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>
